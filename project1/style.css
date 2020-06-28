@@ -1,0 +1,86 @@
+body{
+	background: grey;
+	color: #fff;
+	font-family: arial;
+	line-height: 1.2em;
+
+}
+a{
+	color: #fff;
+	text-decoration: none;
+}
+ul{
+	padding: 0;
+	}
+
+
+	.clr{
+		clear: both;
+	}
+#container{
+	background: #333;
+	background-image: url('paper.jpg'),
+	width: 100%;
+	margin: 30px auto;
+	overflow: hidden;
+	padding: padding; 
+}
+#nav{
+	height: 40px;
+	background: #666;
+}
+#nav ul{
+	padding-top: 13px;
+	padding-left: 10px;
+
+}
+#nav li{
+	list-style: none;
+	float: left;
+	padding-right: 20px;
+
+}
+#nav.active{
+	font-weight: bold;
+	color: #0000;
+
+}
+#main{
+	float: left;
+	width: 70%;
+	background-image: url('cute.jpg'), url(paper.jpg);
+	background-position: right bottom, left top;
+	background-repeat: no-repeat ,repeat;		
+	padding: 15px 200px 15px 15px;
+	background-size: 100px 100px;
+
+}
+#sidebar{
+	float: right;
+	width: 30%;
+	background: pink;
+	margin-top: 20px;
+	padding: 20px;
+	border: #ff0000 1px solid;
+}
+
+#footer{
+	text-align: center;
+	padding: 10px;
+	background: #666;
+	margin-top: 30px;
+}
+.services li{
+	border-bottom: 2px #666 dashed;
+	padding-bottom: 20px;
+}
+.services a{
+	background: #666;
+	padding: 10px;
+
+}
+input, textarea{
+	width: 100px;
+	padding: 5px;
+	margin-bottom: 15px;
+}

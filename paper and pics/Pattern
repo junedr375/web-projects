@@ -1,0 +1,51 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout<<"Enter the no. rows you want:";
+    int r{};
+    cin>>r;
+    cout<<"Enter the no. columns you want:";
+    int c{};
+    cin>>c;
+
+    char pat[r][c];
+
+    for(int i=0;i<r;i++){
+        for(int j=0;j<c;j++){
+            pat[i][j]='-';
+        }
+    }
+
+    //displaying the pattern
+    cout<<"Current pattern:\n\n";
+    for(int i=0;i<r;i++){
+        for(int j=0;j<c;j++){
+            cout<<"\t"<<pat[i][j];
+        }
+        cout<<"\n";
+    }
+
+    cout<<"how many points would you like to enter:";
+    int p;
+    cin>>p;
+    int posRow[p];
+    int posCol[p];
+    for(int i=0;i<p;i++){
+        cout<<"Enter point"<<(i+1)<<": ";
+        cin>>posRow[i]>>posCol[i];
+        pat[posRow[i]-1][posCol[i]-1]='*';
+    }
+
+    //displaying the updated pattern
+    cout<<"Current pattern:\n\n";
+    for(int i=0;i<r;i++){
+        for(int j=0;j<c;j++){
+            cout<<"\t"<<pat[i][j];
+        }
+        cout<<"\n";
+    }
+    return 0;
+}

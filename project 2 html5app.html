@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyNote</title>
+	<style>
+		body{
+		font-family: Tahoma;
+		line-height: 1.6em;
+		background:#f4f4f4;
+		}
+		header, footer{
+			text-align: center;
+		}
+		#container{
+			width: 400px;
+			margin: 50px auto;
+			background:#FFFFA5;
+			overflow: hidden;
+			padding: 30px;
+		}
+		.clear{
+			text-decoration: none;
+			background: #333;
+			padding: 10px;
+		}
+		.j{
+			text-decoration: none;
+			background:pink;
+			padding: 10px;
+		}
+	</style>
+	<script>
+		function getNote() {
+			if(localStorage.getItem('note')){
+				var note = localStorage.getItem('note');
+			} else {
+				var note = 'Go Ahead and edit this note to save in local storage';
+			}}
+			function document.getElementbyId('note').innerHTML = note;
+		
+		function saveNote(id) {
+			var note = document.getElementbyId('note').innerHTML;
+			localStorage.setItem('note',note);
+		}
+		function clearNote() {
+			clear:localStorage.clear();
+			return false;
+		}
+	</script>
+</head>
+	<header>
+		<h1>My Note</h1>
+	</header>
+	<section id="container">
+		
+		<div id="note" contenteditable="true" onkeyup=" saveNote(this.id)">'Go Ahead and edit this note to save in local storage'</div>
+	</section>
+	<footer>
+		<div>
+			<a href="" onclick="javascript:clearNote()" class="clear">Clear Note</a>
+		</div>
+		<div class="j">
+		<p>MyNote &copy; 2019</p>
+	</div>
+	</footer>
+		<script>
+			getNote();
+		</script>
+	</div>
+</body>
+</html>
