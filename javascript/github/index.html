@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Github Profile Finder</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+	<div id="profile"></div>
+
+	<script >
+		function getProfile(){
+			var username='junedr375';
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function(){
+				if(xhhtp.readyState == 4 && xhhtp.status == 200){
+					var user = JSON.parse(xhhtp.responseText);
+					document.getElementById('profile').innerHTML = user;
+				}
+			}
+			xhhtp.open('GET','https://api.github.com/users/'+username,true);
+			xhhtp.send();
+
+		}
+		getProfile();
+	</script>
+
+</body>
+</html>
